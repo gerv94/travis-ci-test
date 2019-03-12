@@ -14,8 +14,9 @@ fail() {
 }
 
 t program should run
-./hello >/dev/null 2>&1 && pass || fail
+./main >/dev/null 2>&1 && pass || fail
+
 t program should print Hello
-cmp <(./hello) <(echo Hello) && pass || fail
+cmp <(./main) <(echo Hello) && pass || fail
 
 echo ALL TESTS PASSED
